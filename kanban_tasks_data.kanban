@@ -1,0 +1,55 @@
+{
+	"categories": [
+		{
+			"uuid": "aad29ef0-ae02-473f-b79a-9bc7c2dcd3bf",
+			"title": "Task",
+			"color": "70bafa"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "0b423984-4fe1-405d-9ee0-dbca4415b251",
+			"title": "Backlog",
+			"tasks": [
+				"fe3432d2-7837-4633-ab76-8a9f92cf7dc6"
+			]
+		},
+		{
+			"uuid": "19cd5384-aca1-4827-8e47-d71695c1a7e2",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "83cb8271-48db-41a0-913c-983feef7c89b",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [
+		{
+			"uuid": "fe3432d2-7837-4633-ab76-8a9f92cf7dc6",
+			"title": "Health Bar Node",
+			"description": "A reusable 2D node that display the parents health, with animations for decrease and increase ",
+			"category": "aad29ef0-ae02-473f-b79a-9bc7c2dcd3bf",
+			"steps": [
+				{
+					"details": "Create health component",
+					"done": false
+				}
+			]
+		}
+	],
+	"layout": {
+		"columns": [
+			[
+				"0b423984-4fe1-405d-9ee0-dbca4415b251"
+			],
+			[
+				"19cd5384-aca1-4827-8e47-d71695c1a7e2"
+			],
+			[
+				"83cb8271-48db-41a0-913c-983feef7c89b"
+			]
+		]
+	}
+}
