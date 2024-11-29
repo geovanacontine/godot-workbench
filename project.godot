@@ -10,9 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Workbench"
+config/name="workbench"
+run/main_scene="res://sources/scenes/world.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
-config/icon="res://assets/icon.svg"
+config/icon="res://resources/icon.svg"
 
 [editor]
 
@@ -21,7 +22,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/Todo_Manager/plugin.cfg", "res://addons/kanban_tasks/plugin.cfg", "res://addons/script-ide/plugin.cfg")
+enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg", "res://addons/script-ide/plugin.cfg")
 
 [rendering]
 

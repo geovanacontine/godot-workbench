@@ -35,6 +35,18 @@
 				{
 					"details": "Create health component",
 					"done": false
+				},
+				{
+					"details": "Basic UI",
+					"done": false
+				},
+				{
+					"details": "Increase animation",
+					"done": false
+				},
+				{
+					"details": "Decrease animation",
+					"done": false
 				}
 			]
 		}

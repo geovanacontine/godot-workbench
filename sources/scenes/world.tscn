@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://b1y5hye1tpgef"]
+
+[ext_resource type="Script" path="res://sources/components/health_component.gd" id="1_vpbe2"]
+[ext_resource type="PackedScene" uid="uid://d1vnjm7vpe0xv" path="res://sources/ui/health_bar/health_bar.tscn" id="2_4g8rc"]
+[ext_resource type="Script" path="res://sources/scenes/container.gd" id="2_aylji"]
+
+[node name="World" type="Node2D"]
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource("1_vpbe2")
+max_life = 100
+
+[node name="Container" type="BoxContainer" parent="." node_paths=PackedStringArray("component")]
+offset_left = 39.0
+offset_top = 48.0
+offset_right = 936.0
+offset_bottom = 508.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 32
+alignment = 1
+vertical = true
+script = ExtResource("2_aylji")
+component = NodePath("../Health")
+
+[node name="HealthBar" parent="Container" node_paths=PackedStringArray("component") instance=ExtResource("2_4g8rc")]
+layout_mode = 2
+size_flags_vertical = 3
+component = NodePath("../../Health")
+
+[node name="Buttons" type="BoxContainer" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="DamageButton" type="Button" parent="Container/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Damage
+"
+
+[node name="HealButton" type="Button" parent="Container/Buttons"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Heal"
+
+[connection signal="pressed" from="Container/Buttons/DamageButton" to="Container" method="_on_damage_button_pressed"]
+[connection signal="pressed" from="Container/Buttons/HealButton" to="Container" method="_on_heal_button_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1vnjm7vpe0xv"]
+
+[ext_resource type="Script" path="res://sources/ui/health_bar/health_bar.gd" id="1_1hhon"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8l2pq"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgwwi"]
+bg_color = Color(0.125911, 0.125911, 0.125911, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjr3g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbpcv"]
+bg_color = Color(0.941912, 0.335831, 0.420125, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_detail = 1
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3fsa1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j8e2o"]
+bg_color = Color(0.465642, 0.826688, 0.368289, 1)
+border_color = Color(0.8, 0.8, 0.8, 0)
+border_blend = true
+corner_detail = 1
+
+[node name="HealthBar" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 224.0
+offset_bottom = 60.0
+script = ExtResource("1_1hhon")
+life_color = Color(0.184314, 0.772549, 0.52549, 1)
+damage_color = Color(1, 0.402395, 0.284301, 1)
+heal_color = Color(0.372458, 0.567748, 1, 1)
+
+[node name="Container" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8l2pq")
+
+[node name="Background" type="Panel" parent="Container"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = -4.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xgwwi")
+
+[node name="FeedbackBar" type="ProgressBar" parent="Container/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_xjr3g")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xbpcv")
+step = 1.0
+value = 75.0
+show_percentage = false
+
+[node name="LifeBar" type="ProgressBar" parent="Container/Background"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxEmpty_3fsa1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_j8e2o")
+step = 1.0
+value = 50.0
+show_percentage = false
