@@ -10,9 +10,7 @@
 		{
 			"uuid": "0b423984-4fe1-405d-9ee0-dbca4415b251",
 			"title": "Backlog",
-			"tasks": [
-				"fe3432d2-7837-4633-ab76-8a9f92cf7dc6"
-			]
+			"tasks": []
 		},
 		{
 			"uuid": "19cd5384-aca1-4827-8e47-d71695c1a7e2",
@@ -22,7 +20,9 @@
 		{
 			"uuid": "83cb8271-48db-41a0-913c-983feef7c89b",
 			"title": "Done",
-			"tasks": []
+			"tasks": [
+				"fe3432d2-7837-4633-ab76-8a9f92cf7dc6"
+			]
 		}
 	],
 	"tasks": [
@@ -34,19 +34,19 @@
 			"steps": [
 				{
 					"details": "Create health component",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Basic UI",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Increase animation",
-					"done": false
+					"done": true
 				},
 				{
 					"details": "Decrease animation",
-					"done": false
+					"done": true
 				}
 			]
 		}

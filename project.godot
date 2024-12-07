@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="workbench"
-run/main_scene="res://sources/scenes/world.tscn"
+run/main_scene="res://sources/ui/health_bar/health_bar_demo.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://resources/icon.svg"
 
